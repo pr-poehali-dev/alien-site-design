@@ -103,6 +103,22 @@ export default {
 				'rotate-slow': {
 					'from': { transform: 'rotate(0deg)' },
 					'to': { transform: 'rotate(360deg)' }
+				},
+				'orbit-1': {
+					'0%': { transform: 'rotate(0deg) translateX(100px) rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg) translateX(100px) rotate(-360deg)' }
+				},
+				'orbit-2': {
+					'0%': { transform: 'rotate(0deg) translateX(150px) rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg) translateX(150px) rotate(-360deg)' }
+				},
+				'orbit-3': {
+					'0%': { transform: 'rotate(0deg) translateX(200px) rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg) translateX(200px) rotate(-360deg)' }
+				},
+				'planet-spin': {
+					'from': { transform: 'rotateY(0deg)' },
+					'to': { transform: 'rotateY(360deg)' }
 				}
 			},
 			animation: {
@@ -110,7 +126,11 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-cosmic': 'pulse-cosmic 4s ease-in-out infinite',
-				'rotate-slow': 'rotate-slow 20s linear infinite'
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'orbit-1': 'orbit-1 30s linear infinite',
+				'orbit-2': 'orbit-2 45s linear infinite',
+				'orbit-3': 'orbit-3 60s linear infinite',
+				'planet-spin': 'planet-spin 10s linear infinite'
 			}
 		}
 	},

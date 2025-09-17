@@ -133,4 +133,81 @@
     border-radius: 50%;
     animation: rotate-slow 30s linear infinite;
   }
+
+  .planet-3d {
+    background:
+      radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.3),
+        transparent 50%
+      ),
+      linear-gradient(135deg, var(--planet-color-1), var(--planet-color-2));
+    box-shadow:
+      inset -10px -10px 20px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 215, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .planet-3d::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 30%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 70%,
+      transparent 100%
+    );
+    animation: planet-spin 8s linear infinite;
+  }
+
+  .orbit-system {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .asteroid-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+
+  .asteroid {
+    position: absolute;
+    background: linear-gradient(45deg, #8b7355, #a0956c);
+    border-radius: 50% 40% 60% 30%;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .nebula-bg {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(147, 51, 234, 0.1) 0%,
+      rgba(79, 70, 229, 0.05) 50%,
+      transparent 100%
+    );
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
